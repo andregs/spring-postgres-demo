@@ -41,3 +41,18 @@ kubectl.exe rollout status deployment spring-pg-k8s
 ```shell
 minikube service --url spring-pg-k8s
 ```
+
+11. Add skaffold support via:
+
+```shell
+skaffold init -k ./k8s/*.yaml
+```
+
+12. Add the whole build section to the generated yaml file, specifying how skaffold should build your app image.
+13. Build & deploy to k8s with skaffold (I had to downgrade to Java 11):
+
+```shell
+skaffold.exe dev --port-forward
+```
+
+14. Pay attention to the url and port skaffold will print for you, then test your /todo endpoints.
