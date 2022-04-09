@@ -1,6 +1,8 @@
 # README
 ## Spring + PostgreSQL on Kubernetes demo
 
+You can reproduce this demo starting from scratch, just follow these instructions and the commit history.
+
 1. Generated from [start.spring.io](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.6.6&packaging=jar&jvmVersion=17&groupId=com.example&artifactId=spring-postgres-k8s&name=spring-postgres-k8s&description=Demo%20project%20for%20Spring%20Boot&packageName=com.example.demo&dependencies=actuator,web,data-jpa,postgresql) with web, actuator, data jpa & postgres driver.
 2. Create basic web jpa app.
 3. Configure db connection & schema generation.
@@ -56,3 +58,5 @@ skaffold.exe dev --port-forward
 ```
 
 14. Pay attention to the url and port skaffold will print for you, then test your /todo endpoints.
+
+* Notice that you can delete the repo you published to Docker Hub on step 7, because with skaffold you use only our local docker registry.
