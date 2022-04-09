@@ -4,9 +4,12 @@ debug: true
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost/spring-pg-k8s
+#    url: jdbc:postgresql://localhost/spring-pg-k8s # TODO profiles per environment
+    url: jdbc:postgresql://postgres/spring-pg-k8s
     username: postgres
-    password: mysecretpassword
+    password: mysecretpassword # TODO secret management
   sql:
     init:
       mode: always
+
+# TODO volumes to persist data across pod restarts
