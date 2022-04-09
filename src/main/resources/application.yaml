@@ -1,0 +1,12 @@
+# https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+
+debug: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/spring-pg-k8s
+    username: postgres
+    password: mysecretpassword
+  sql:
+    init:
+      mode: always
